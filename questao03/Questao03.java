@@ -1,12 +1,9 @@
 package questao03;
 
-
 import java.util.InputMismatchException;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.Scanner;
-
-
 
 public class Questao03 {
     private static Scanner sc = new Scanner(System.in);
@@ -25,6 +22,10 @@ public class Questao03 {
             }
             sc.nextLine();
         }
+    }
+
+    private static void lerPessoa(int i, Pessoa pessoa) {
+        recebeCpf(i, recebeIdade(i, recebeNome(i, pessoa)));
     }
 
     private static Pessoa recebeNome(int i, Pessoa pessoa) throws InputMismatchException {
@@ -64,6 +65,16 @@ public class Questao03 {
         return cpfContain;
     }
 
+    private static void exibirPessoas(LinkedHashSet<Pessoa> pessoas) {
+        Iterator<Pessoa> pessoasAsIterator = pessoas.iterator();
+        while (pessoasAsIterator.hasNext()) {
+            Pessoa p = pessoasAsIterator.next();
+            System.out.println("Nome: " + p.getNome());
+            System.out.println("Idade: " + p.getIdade());
+            System.out.println("Cpf: " + p.getCpf());
+        }
+    }
+
     public static void main(String args[]) {
 
         recebeNPessoas();
@@ -71,7 +82,7 @@ public class Questao03 {
         for (int i = 0; i < numPessoas; i++) {
             Pessoa pessoa = new Pessoa();
             try {
-                recebeCpf(i, recebeIdade(i, recebeNome(i, pessoa)));
+                lerPessoa(i, pessoa);
 
                 if (verificaCpf(pessoa)) {
                     System.out.println("Esta pessoa já está cadastrada");
@@ -88,19 +99,6 @@ public class Questao03 {
             }
             sc.nextLine();
         }
-
-        Iterator<Pessoa> pessoasAsIterator = pessoas.iterator();
-        while (pessoasAsIterator.hasNext()) {
-            Pessoa p = pessoasAsIterator.next();
-            System.out.println(p.getNome());
-            System.out.println(p.getIdade());
-            if (p.getCpf() != 0) {
-                System.out.println(p.getCpf());
-            } else {
-                System.out.println("vazio");
-            }
-
-        }
+        exibirPessoas(pessoas);
     }
-
 }
