@@ -76,9 +76,7 @@ public class Questao03 {
     }
 
     public static void main(String args[]) {
-
         recebeNPessoas();
-
         for (int i = 0; i < numPessoas; i++) {
             Pessoa pessoa = new Pessoa();
             try {
