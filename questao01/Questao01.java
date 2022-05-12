@@ -4,8 +4,8 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Questao01 {
-  static Pessoa[] pessoas = new Pessoa[3];
-  static Scanner sc = new Scanner(System.in);
+  private static Pessoa[] pessoas = new Pessoa[3];
+  private static Scanner sc = new Scanner(System.in);
 
   private static void recebeNome(int i, Pessoa[] pessoas) throws InputMismatchException {
     System.out.println("DIGITE O NOME DA PESSOA " + (i + 1));
@@ -49,5 +49,4 @@ public class Questao01 {
       mostrarPessoas(i);
     }
   }
-
 }
