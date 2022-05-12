@@ -86,7 +86,6 @@ public class Questao03 {
 
                 if (verificaCpf(pessoa)) {
                     System.out.println("Esta pessoa já está cadastrada");
-                    System.out.println("  ");
                     System.out.println("TENTE NOVAMENTE");
                     i -= 1;
                 } else {
