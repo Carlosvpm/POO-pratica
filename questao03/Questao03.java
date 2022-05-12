@@ -1,9 +1,12 @@
+package questao03;
 
 
 import java.util.InputMismatchException;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.Scanner;
+
+
 
 public class Questao03 {
     private static Scanner sc = new Scanner(System.in);
