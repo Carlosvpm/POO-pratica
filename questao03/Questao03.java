@@ -83,7 +83,6 @@ public class Questao03 {
             Pessoa pessoa = new Pessoa();
             try {
                 lerPessoa(i, pessoa);
-
                 if (verificaCpf(pessoa)) {
                     System.out.println("Esta pessoa já está cadastrada");
                     System.out.println("TENTE NOVAMENTE");
@@ -91,7 +90,6 @@ public class Questao03 {
                 } else {
                     pessoas.add(pessoa);
                 }
-
             } catch (InputMismatchException e) {
                 System.out.println("Os campos em questão têm tipos específicos, por favor preencha de acordo!");
                 i -= 1;
