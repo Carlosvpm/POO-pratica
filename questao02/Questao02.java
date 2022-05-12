@@ -44,6 +44,13 @@ public class Questao02 {
         recebeCpf(i, pessoas);
     }
 
+    private static void mostrarPessoas(int i) {
+        System.out.println("NOME DA PESSOA " + (i + 1) + " : " + pessoas[i].getNome());
+        System.out.println("IDADE DA PESSOA " + (i + 1) + " : " + pessoas[i].getIdade());
+        System.out.println("CPF DA PESSOA " + (i + 1) + " : " + pessoas[i].getCpf());
+
+    }
+
     public static void main(String args[]) {
 
         recebeNPeossas();
@@ -60,10 +67,7 @@ public class Questao02 {
             sc.nextLine();
         }
         for (int i = 0; i < numPessoas; i++) {
-            System.out.println("NOME DA PESSOA " + (i + 1) + " : " + pessoas[i].getNome());
-            System.out.println("IDADE DA PESSOA " + (i + 1) + " : " + pessoas[i].getIdade());
-            System.out.println("CPF DA PESSOA " + (i + 1) + " : " + pessoas[i].getCpf());
-
+            mostrarPessoas(i);
         }
     }
 
