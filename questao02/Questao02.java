@@ -9,7 +9,7 @@ public class Questao02 {
     private static int numPessoas;
     private static Pessoa[] pessoas = new Pessoa[numPessoas];
 
-    private static void recebeNPeossas() throws InputMismatchException, NullPointerException {
+    private static void recebeNPessoas() throws InputMismatchException, NullPointerException {
 
         for (int x = 0; x < 1; x++) {
             try {
@@ -53,7 +53,7 @@ public class Questao02 {
 
     public static void main(String args[]) {
 
-        recebeNPeossas();
+        recebeNPessoas();
 
         for (int i = 0; i < numPessoas; i++) {
             pessoas[i] = new Pessoa();
