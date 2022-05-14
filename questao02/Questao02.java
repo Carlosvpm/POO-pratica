@@ -7,7 +7,7 @@ public class Questao02 {
 
     private static Scanner sc = new Scanner(System.in);
     private static int numPessoas;
-    private static Pessoa[] pessoas = new Pessoa[numPessoas];
+    
 
     private static void recebeNPessoas() throws InputMismatchException, NullPointerException {
 
@@ -44,7 +44,7 @@ public class Questao02 {
         recebeCpf(i, pessoas);
     }
 
-    private static void mostrarPessoas(int i) {
+    private static void mostrarPessoas(int i, Pessoa[] pessoas) {
         System.out.println("NOME DA PESSOA " + (i + 1) + " : " + pessoas[i].getNome());
         System.out.println("IDADE DA PESSOA " + (i + 1) + " : " + pessoas[i].getIdade());
         System.out.println("CPF DA PESSOA " + (i + 1) + " : " + pessoas[i].getCpf());
@@ -52,8 +52,8 @@ public class Questao02 {
     }
 
     public static void main(String args[]) {
-
         recebeNPessoas();
+        Pessoa[] pessoas = new Pessoa[numPessoas];
 
         for (int i = 0; i < numPessoas; i++) {
             pessoas[i] = new Pessoa();
@@ -67,7 +67,7 @@ public class Questao02 {
             sc.nextLine();
         }
         for (int i = 0; i < numPessoas; i++) {
-            mostrarPessoas(i);
+            mostrarPessoas(i, pessoas);
         }
     }
 
